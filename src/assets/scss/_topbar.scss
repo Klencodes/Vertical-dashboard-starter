@@ -73,7 +73,7 @@
     .navbar-toggler {
       border: 0;
       color: inherit;
-      height: $navbar-height;
+      // height: $navbar-height;
       @include border-radius(0px);
       padding-left: 5px;
       padding-right: 20px;
@@ -89,6 +89,9 @@
           padding-right: 11px;
           border-right: none;
         }
+      }
+      &.navbar-toggler:focus {
+        box-shadow: none;
       }
     }
 

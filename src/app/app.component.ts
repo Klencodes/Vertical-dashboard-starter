@@ -6,7 +6,7 @@ import { Router, NavigationEnd, NavigationStart, RouteConfigLoadStart, RouteConf
   templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit{
-  title = 'demo1';
+  title = '';
 
   showSidebar: boolean = true;
   showNavbar: boolean = true;
@@ -15,10 +15,10 @@ export class AppComponent implements OnInit{
 
   constructor(private router: Router) {
     
-    // Removing Sidebar, Navbar, Footer for Documentation, Error and Auth pages
+    // Removing Sidebar, Navbar, Footer and Auth pages
     router.events.forEach((event) => { 
       if(event instanceof NavigationStart) {
-        if((event['url'] == '/user-pages/login') || (event['url'] == '/user-pages/register') || (event['url'] == '/error-pages/404') || (event['url'] == '/error-pages/500') ) {
+        if((event['url'] == '/auth/signin') || (event['url'] == '/auth/signup') || (event['url'] == '/auth/forgot-password') || (event['url'] == '/auth/reset-password') ) {
           this.showSidebar = false;
           this.showNavbar = false;
           this.showFooter = false;
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit{
           document.querySelector('.page-body-wrapper').classList.add('full-page-wrapper');
           document.querySelector('.content-wrapper').classList.remove('auth', 'auth-img-bg', );
           document.querySelector('.content-wrapper').classList.remove('auth', 'lock-full-bg');
-          if((event['url'] == '/error-pages/404') || (event['url'] == '/error-pages/500')) {
+          if((event['url'] == '/auth/forgot-password') || (event['url'] == '/auth/reset-password')) {
             document.querySelector('.content-wrapper').classList.add('p-0');
           }
         } else {

@@ -1,0 +1,22 @@
+.footer {
+  background: $footer-bg;
+  color: $footer-color;
+  padding: 20px 15px 10px;
+  transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  width: 100%;
+  border-top: $border-width solid $border-color;
+  font-size: calc(#{$default-font-size} - 0.05rem);
+
+  a {
+    color: theme-color(success);
+    font-size: inherit;
+  }
+
+  @media (max-width: 991px) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
