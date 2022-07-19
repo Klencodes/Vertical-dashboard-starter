@@ -1,4 +1,4 @@
-@import '/src/styles.scss';
+@import '../../../../styles.scss';
 .sidebar {
     min-height: calc(100vh - #{$navbar-height});
     background: $white;
@@ -57,7 +57,7 @@
             }
   
             &.menu-arrow {
-              font: "feather";
+              font-family: "feather" !important;
               line-height: 1;
               font-size: 1.125rem;
               margin-left: auto;
@@ -81,13 +81,16 @@
               }
             }
           }
-  
+          .pull-menu-left {
+            float: left !important;
+          }
           .menu-title {
             color: inherit;
             display: inline-block;
-            font-size: 16px;
+            font-size: 16px !important;
             line-height: 1;
             vertical-align: middle;
+            padding-left: 15px;
           }
   
           .badge {
@@ -98,20 +101,25 @@
           &[aria-expanded="true"]{
             .menu-arrow{
               &:before{
-                content: "\F0140";
+                content: "\e92d";
               }
             }
           }
         }
   
         &.active {
+          background-color: $primary;
           .nav-link {
             .menu-title {
-              color: $sidebar-menu-active-color;
+              color: $white;
             }
             i {
-              color: theme-color(primary);
+              color: $white;
             }
+          }
+          &:hover{
+            background-color: $primary;
+            color: $white;
           }
         }
   
@@ -196,7 +204,7 @@
             border-top: 0;
             &:before {
               content: "\e92d";
-              font-family: "feather";
+              font-family: "feather" !important;
               display: block;
               position: absolute;
               left:0px;
