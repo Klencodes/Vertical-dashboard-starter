@@ -11,6 +11,10 @@
   }
 }
 @media screen and (max-width: 991px) {
+  .spinner-wrapper {
+    width: 100% !important;
+  }  
+  
   .row-offcanvas {
     position: relative;
     -webkit-transition: all .25s ease-out;

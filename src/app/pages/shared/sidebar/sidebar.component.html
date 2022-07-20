@@ -62,7 +62,7 @@
       </a>
     </li>
     <li class="nav-item"
-      [ngClass]="{ 'active' : blankPage.isActive || login.isActive || register.isActive || error404.isActive || error500.isActive }">
+      [ngClass]="{ 'active' : blankPage.isActive || signin.isActive || register.isActive || error404.isActive || error500.isActive }">
       <a class="nav-link" (click)="samplePagesCollapsed = !samplePagesCollapsed"
         [attr.aria-expanded]="samplePagesCollapsed" aria-controls="auth">
         <span class="pull-menu-left">
@@ -73,10 +73,12 @@
       </a>
       <div class="collapse" id="auth" [ngbCollapse]="!samplePagesCollapsed">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" routerLink="general-pages/blank-page" routerLinkActive="active"
-              #blankPage="routerLinkActive"> Blank Page </a></li>
-          <li class="nav-item"> <a class="nav-link" routerLink="user-pages/login" routerLinkActive="active"
-              #login="routerLinkActive"> Login </a></li>
+          <li class="nav-item"> 
+            <a class="nav-link" routerLink="general-pages/blank-page" routerLinkActive="active"
+              #blankPage="routerLinkActive"> Blank Page </a>
+          </li>
+          <li class="nav-item"> <a class="nav-link" routerLink="auth/signin" routerLinkActive="active"
+              #signin="routerLinkActive"> Login </a></li>
           <li class="nav-item"> <a class="nav-link" routerLink="user-pages/register" routerLinkActive="active"
               #register="routerLinkActive"> Register </a></li>
           <li class="nav-item"> <a class="nav-link" routerLink="error-pages/404" routerLinkActive="active"
