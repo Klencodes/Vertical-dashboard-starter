@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './pages/shared/shared.module';
-import { SharedDirectivesModule } from './core/directives/shared-directives-module';
+import { ThemeService } from './theme.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,11 +15,12 @@ import { SharedDirectivesModule } from './core/directives/shared-directives-modu
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule,
     SharedModule,
-    SharedDirectivesModule
+    NgbModule,
   ],
-  providers: [],
+  providers: [
+    ThemeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

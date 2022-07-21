@@ -1,0 +1,56 @@
+@import '~bootstrap/scss/bootstrap';
+$white:    #fff !default;
+$gray-100: #fdf6e3 !default;
+$gray-200: #eee8d5 !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #839496 !default;
+$gray-700: #495057 !default;
+$gray-800: #073642 !default;
+$gray-900: #002b36 !default;
+$black:    #000 !default;
+
+$theme-gradient-colors: (
+  primary:         linear-gradient(to right, #da8cff, #9a55ff),
+  secondary:       linear-gradient(to right, #e7ebf0, #868e96),
+  success:         linear-gradient(to right, #84d9d2, #07cdae),
+  info:            linear-gradient(to right, #90caf9, #047edf 99%),
+  warning:         linear-gradient(to right, #f6e384, #ffd500),
+  danger:          linear-gradient(to right, #ffbf96, #fe7096),
+  light:           linear-gradient(to bottom, #f4f4f4, #e4e4e9),
+  dark:            linear-gradient(89deg, #5e7188, #3e4b5b)
+);
+$min-contrast-ratio:   2.5 !default;
+
+
+// Body
+
+$body-bg:                   $white !default;
+$content-bg:                $gray-100 !default;
+$body-color:                $gray-700 !default;
+
+$navbar-height: 70px;
+$default-font-size: 14px;
+$navbar-font-size: .875rem;
+$navbar-icon-font-size: 1.25rem;
+
+////////// SIDEBAR ////////
+$sidebar-width-lg: 260px;
+$sidebar-width-mini: 185px;
+$sidebar-width-icon: 70px;
+
+$sidebar-menu-color: $body-color;
+$sidebar-submenu-color: $gray-500;
+$sidebar-menu-active-bg: $body-bg;
+$sidebar-menu-active-color: theme-color(primary);
+$sidebar-menu-hover-bg: darken($body-bg, 1%);
+$sidebar-menu-hover-color: darken($sidebar-menu-color, 10%);
+$sidebar-submenu-hover-color: darken($sidebar-submenu-color, 20%);
+$sidebar-menu-icon-color:$body-color;
+$sidebar-menu-arrow-color: $body-color;
+$sidebar-menu-border-color: $gray-500;
+
+//Import app scss
+@import '~bootstrap/scss/bootstrap';
+@import '../app.scss';

@@ -11,7 +11,7 @@ export class SidebarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    const body = document.querySelector('body');
+    const body: any = document.querySelector('body');
 
     // add class 'hover-open' to sidebar navitem while hover in sidebar-icon-only menu
     document.querySelectorAll('.sidebar .nav-item').forEach(function (el) {
@@ -31,6 +31,9 @@ export class SidebarComponent implements OnInit {
    * Hide the sidebar
    */
    public hide() {
-    document.querySelector('.sidebar-offcanvas').classList.toggle('hidden');
+    document.body.classList.remove('right-bar-enabled .active');
+    document.querySelector('.page-body-wrapper')?.classList.remove('full-page-wrapper');
+    document.querySelector('.sidebar-offcanvas')?.classList.toggle('active');
+
   }
 }

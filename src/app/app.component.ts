@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd, NavigationStart, RouteConfigLoadStart, RouteConfigLoadEnd } from '@angular/router';
+import { Component } from '@angular/core';
+import { NavigationEnd, NavigationStart, RouteConfigLoadEnd, RouteConfigLoadStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
-export class AppComponent implements OnInit{
-  title = '';
+export class AppComponent {
+  title = 'ngb-theme-switcher-example';
 
   showSidebar: boolean = true;
   showNavbar: boolean = true;
@@ -33,10 +33,10 @@ export class AppComponent implements OnInit{
           this.showSidebar = true;
           this.showNavbar = true;
           this.showFooter = true;
-          document.querySelector('.main-panel').classList.remove('w-100');
-          document.querySelector('.page-body-wrapper').classList.remove('full-page-wrapper');
-          document.querySelector('.content-wrapper').classList.remove('auth', 'auth-img-bg');
-          document.querySelector('.content-wrapper').classList.remove('p-0');
+          document.querySelector('.main-panel')?.classList.remove('w-100');
+          document.querySelector('.page-body-wrapper')?.classList.remove('full-page-wrapper');
+          document.querySelector('.content-wrapper')?.classList.remove('auth', 'auth-img-bg');
+          document.querySelector('.content-wrapper')?.classList.remove('p-0');
         }
       }
     });
@@ -50,9 +50,7 @@ export class AppComponent implements OnInit{
       }
     });
   }
-
-
-
+  
   ngOnInit() {
     // Scroll to top after route change
     this.router.events.subscribe((evt) => {

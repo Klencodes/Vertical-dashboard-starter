@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  background: $content-bg;
+  background:$body-bg;
 }
 
 *:-moz-full-screen,
@@ -199,6 +199,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  
   height: calc(100vh - #{$navbar-height} - 5.5rem);
   position: fixed;
   width: calc(100% - #{$sidebar-width-lg} - 4rem);
@@ -236,7 +237,7 @@ code {
 //Sidebar scss //
 .sidebar {
   min-height: calc(100vh - #{$navbar-height});
-  background: $white;
+  background: $body-bg;
   padding: 0;
   width: $sidebar-width-lg;
   z-index: 11;
@@ -244,6 +245,9 @@ code {
   -webkit-transition: width 0.25s ease, background 0.25s ease;
   -moz-transition: width 0.25s ease, background 0.25s ease;
   -ms-transition: width 0.25s ease, background 0.25s ease;
+  -webkit-box-shadow: 0px 2px 2px 1px rgb(0 0 0 / 10%);
+  -moz-box-shadow: 0px 2px 2px 1px rgb(0 0 0 / 10%);
+  box-shadow: 0px 2px 2px 1px rgb(0 0 0 / 10%);
   height: 100%;
 
   .nav {
@@ -273,9 +277,9 @@ code {
         transition-property: color;
         -webkit-transition-property: color;
         cursor: pointer;
-
+        
         i {
-          color: $gray;
+          color: $body-color;
 
           &.menu-icon {
             font-size: 1.125rem;
@@ -590,7 +594,6 @@ code {
 }
 // Sidebar icon only layout end
 
-
 /* style for off-canvas menu*/
 @media screen and (max-width: 991px) {
   .sidebar-offcanvas {
@@ -606,8 +609,5 @@ code {
     &.active {
       right: 0;
     }
-    // &.hidden{
-    //   display: none;
-    // }
   }
 }

@@ -4,9 +4,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ClickOutsideModule } from 'ng-click-outside';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -17,15 +16,17 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    ClickOutsideModule,
-    NgbModule,
-    RouterModule
+    RouterModule,
+    NgbModule
   ],
   exports: [
     FooterComponent,
     SpinnerComponent,
     SidebarComponent,
     NavbarComponent
-  ]
+  ],
+  providers: [
+  	// ThemeService
+  ],
 })
 export class SharedModule { }

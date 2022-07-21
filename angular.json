@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "starter-dashboard": {
+    "light-dark-theme": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -25,11 +25,11 @@
         "@schematics/angular:pipe": {
           "skipTests": true
         },
-        "@schematics/angular:resolver": {
-          "skipTests": true
-        },
         "@schematics/angular:service": {
           "skipTests": true
+        },
+        "@schematics/angular:application": {
+          "strict": false
         }
       },
       "root": "",
@@ -39,7 +39,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/starter-dashboard",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -51,7 +51,21 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/icons/icons.scss"
+              {
+                "input": "src/assets/scss/themes/light.scss",
+                "bundleName": "light",
+                "inject": true
+              },
+              {
+                "input": "src/assets/scss/themes/dark.scss",
+                "bundleName": "dark",
+                "inject": false
+              },
+              {
+                "input": "src/assets/scss/themes/vapor.scss",
+                "bundleName": "vapor",
+                "inject": false
+              }
             ],
             "scripts": []
           },
@@ -60,13 +74,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "5mb",
+                  "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "200kb",
-                  "maximumError": "400kb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 }
               ],
               "fileReplacements": [
@@ -92,10 +106,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "starter-dashboard:build:production"
+              "browserTarget": "light-dark-theme:build:production"
             },
             "development": {
-              "browserTarget": "starter-dashboard:build:development"
+              "browserTarget": "light-dark-theme:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -103,7 +117,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "starter-dashboard:build"
+            "browserTarget": "light-dark-theme:build"
           }
         },
         "test": {
@@ -126,5 +140,6 @@
         }
       }
     }
-  }
+  },
+  "defaultProject": "light-dark-theme"
 }

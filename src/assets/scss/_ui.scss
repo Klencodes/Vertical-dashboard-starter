@@ -45,7 +45,7 @@
 }
 
 .cat-slider-bg {
-    background-color: white;
+    background-color: light;
     padding: 10px 10px 15px;
 }
 
@@ -126,10 +126,10 @@
 }
 .btn-primary{
     background-color: $primary;
-    color: $white;
+    color: $light;
     border-color: $primary;
     &:hover, &:focus, &:active, &:focus:active{
-        color: $white;
+        color: $light;
         box-shadow: none;
         background-color: $primary;
         border-color: $primary;
@@ -137,10 +137,10 @@
 }
 .btn-secondary{
     background-color: $secondary;
-    color: $white;
+    color: $light;
     border-color: $secondary;
     &:hover, &:focus, &:active, &:focus:active{
-        color: $white;
+        color: $light;
         box-shadow: none;
         background-color: $secondary;
         border-color: $secondary;
@@ -148,10 +148,10 @@
 }
 .btn-success{
     background-color: $success;
-    color: $white;
+    color: $light;
     border-color: $success;
     &:hover, &:focus, &:active, &:focus:active{
-        color: $white;
+        color: $light;
         box-shadow: none;
         background-color: $success;
         border-color: $success;
@@ -159,10 +159,10 @@
 }
 .btn-dark{
     background-color: $dark;
-    color: $white;
+    color: $light;
     border-color: $dark;
     &:hover, &:focus, &:active, &:focus:active{
-        color: $white;
+        color: $light;
         box-shadow: none;
         background-color: $dark;
         border-color: $dark;
@@ -170,10 +170,10 @@
 }
 .btn-info{
     background-color: $info;
-    color: $white;
+    color: $light;
     border-color: $info;
     &:hover, &:focus, &:active, &:focus:active{
-        color: $white;
+        color: $light;
         box-shadow: none;
         background-color: $info;
         border-color: $info;
@@ -181,10 +181,10 @@
 }
 .btn-warning{
     background-color: $warning;
-    color: $white;
+    color: $light;
     border-color: $warning;
     &:hover, &:focus, &:active, &:focus:active{
-        color: $white;
+        color: $light;
         box-shadow: none;
         background-color: $warning;
         border-color: $warning;
@@ -192,10 +192,10 @@
 }
 .btn-danger{
     background-color: $danger;
-    color: $white;
+    color: $light;
     border-color: $danger;
     &:hover, &:focus, &:active, &:focus:active{
-        color: $white;
+        color: $light;
         box-shadow: none;
         background-color: $danger;
         border-color: $danger;
@@ -211,10 +211,4 @@
         background-color: $light;
         border-color: $light;
     }
-}
-.auth .auth-img-bg {
-    background-image: url('../images/auth/login-bg.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
