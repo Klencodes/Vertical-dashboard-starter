@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
-import { ThemeService } from 'src/app/theme.service';
+import { ThemeService } from 'src/app/core/services/helpers/theme.service';
 
 @Component({
   selector: 'app-navbar',
